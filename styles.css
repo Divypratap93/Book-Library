@@ -1,0 +1,99 @@
+/* Popup container (hidden by default) */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #444;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  /* Overlay for dimming the background */
+  .overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  /* Close button */
+  .close-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+  }
+
+  .close-btn:hover {
+    background-color: darkred;
+  }
+
+  body {
+    display: flex;          /* Enable Flexbox */
+    justify-content: center; /* Horizontally center items */
+    align-items: center;
+    flex-direction: column;     /* Vertically center items */
+    height: 100vh;           /* Set full height for vertical centering */
+    margin: 0;
+    gap: 48px;               /* Remove default margin */
+    background-color: #f0f0f0; /* Optional: Background color for better visibility */
+}
+
+/* Table Styles */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Table Header Styles */
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 16px;
+}
+
+/* Table Data Styles */
+td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Alternate Row Background Colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover Effect on Rows */
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Table Footer (if needed) */
+tfoot {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+th, td {
+    font-size: 14px;
+}
+
+.button {
+
+    background-color: #4CAF50;
+}
