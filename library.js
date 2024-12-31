@@ -138,14 +138,20 @@ openPopupButton.addEventListener('click',()=>{
  button.addEventListener('click', (event) => {
      event.preventDefault(); // Prevent form submission
      // Get input values
-     const name = document.getElementById('name').value;
-     const author = document.getElementById('author').value;
-     const pages = document.getElementById('pages').value;
-     const read = document.getElementById('read').value;
+     const name = document.getElementById('name');
+     const author = document.getElementById('author');
+     const pages = document.getElementById('pages');
+     const read = document.getElementById('read');
+   if(name.checkValidity()&&author.checkValidity()&&pages.checkValidity()){
+// Call addBookToLibrary
+addBookToLibrary(name.value, author.value, pages.value, read.value);
 
-     // Call addBookToLibrary
-     addBookToLibrary(name, author, pages, read);
+closePopup();
+   }
+   else{
+      alert("enter valid inputs")
+   }
 
-     closePopup();
+     
  });
 });
